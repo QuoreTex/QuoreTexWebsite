@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Code, Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
+import { Menu, X, Moon, Sun } from "lucide-react";
+import { useTheme } from "@/components/ui/theme-provider";
 import { Button } from "@/components/ui/button";
 import { NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -11,7 +11,13 @@ import image from "../../images/logobg.png"
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+
+  // Once mounted on client, we can show the UI
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,18 +35,19 @@ const Header = () => {
   const closeMenu = () => setIsOpen(false);
 
   const headerClasses = cn(
-    "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-    scrolled 
-      ? "bg-background/95 backdrop-blur-md shadow-sm py-2" 
-      : "bg-transparent py-4"
+    "fixed top-0 left-0 right-0 z-50 transition-all duration-300 header-darker",
+    scrolled ? "shadow-sm py-2" : "py-4"
   );
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <header className={headerClasses}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
-            
             <img src={image} className="h-16 w-16 text-primary"/>
             <span className="font-bold text-xl md:text-2xl text-foreground">
               QuoreTex Technologies
@@ -54,7 +61,7 @@ const Header = () => {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-foreground/80 hover:text-primary transition-colors duration-200"
+                    className="text-foreground hover:text-primary transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -70,9 +77,9 @@ const Header = () => {
               <Link to="/contact">Get Started</Link>
             </Button>
             <Button
-              variant="ghost"
+              variant="outline"
               size="icon"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
               aria-label="Toggle theme"
             >
               {theme === "dark" ? (
@@ -86,9 +93,9 @@ const Header = () => {
           {/* Mobile Nav Toggle */}
           <div className="flex items-center md:hidden space-x-4">
             <Button
-              variant="ghost"
+              variant="outline"
               size="icon"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
               aria-label="Toggle theme"
             >
               {theme === "dark" ? (

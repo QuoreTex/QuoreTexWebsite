@@ -56,7 +56,8 @@ const ContactSection = () => {
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     
-    // Simulate API call
+    // Simulate API call and use form data
+    console.log('Sending form data:', data);
     await new Promise((resolve) => setTimeout(resolve, 1500));
     
     toast({
@@ -78,7 +79,7 @@ const ContactSection = () => {
         >
           <motion.h2 
             variants={textVariant}
-            className="text-3xl md:text-4xl font-bold mb-4"
+            className="text-3xl md:text-4xl font-bold mb-4 text-accent-dark"
           >
             Get in <span className="text-primary">Touch</span>
           </motion.h2>
@@ -150,9 +151,11 @@ const ContactSection = () => {
                 <div className="h-64 rounded-lg overflow-hidden">
                   <iframe
                     title="Office Location"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30596552044!2d-74.25986548248684!3d40.69714941932609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sca!4v1619808115183!5m2!1sen!2sca"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.314964964624!2d77.7581940752006!3d20.96437918072659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd6a300001b244f%3A0x8b15e45ab1d49909!2sTulsi%20Pearl%20Apartment!5e0!3m2!1sen!2sin!4v1718470000000!5m2!1sen!2sin"
                     className="w-full h-full border-0"
                     loading="lazy"
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
                   ></iframe>
                 </div>
               </div>

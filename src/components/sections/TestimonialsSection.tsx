@@ -45,7 +45,7 @@ const TestimonialsSection = () => {
         >
           <motion.h2 
             variants={textVariant}
-            className="text-3xl md:text-4xl font-bold mb-4"
+            className="text-3xl md:text-4xl font-bold mb-4 text-accent-dark"
           >
             Client <span className="text-primary">Testimonials</span>
           </motion.h2>

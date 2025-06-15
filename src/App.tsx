@@ -11,7 +11,7 @@ import NotFoundPage from "@/pages/NotFoundPage";
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="system">
+    <ThemeProvider defaultTheme="dark">
       <Router>
         <Layout>
           <Routes>

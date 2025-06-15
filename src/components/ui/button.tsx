@@ -19,6 +19,10 @@ const buttonVariants = cva(
           'bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
+        webapp: 'bg-[#34A0A4] text-white shadow hover:bg-[#168AAD]',
+        custom: 'bg-[#B5E48C] text-[#184E77] shadow hover:bg-[#99D98C]',
+        mobile: 'bg-[#76C893] text-white shadow hover:bg-[#52B69A]',
+        cloud: 'bg-[#184E77] text-white shadow hover:bg-[#1E6091]',
       },
       size: {
         default: 'h-9 px-4 py-2',

@@ -1,18 +1,16 @@
 import { Link } from "react-router-dom";
 import { 
-  Code, 
   Mail, 
   Phone, 
   MapPin, 
-  Twitter, 
-  Linkedin, 
-  Facebook, 
-  Instagram 
+  Linkedin,
+  Instagram
 } from "lucide-react";
 import { COMPANY_INFO } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import image from "../../images/logobg.png"
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
@@ -23,8 +21,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-2">
-              {/* <Code className="h-8 w-8 text-primary" /> */}
-               <img src={image} className="h-16 w-16 text-primary"/>
+              <img src={image} className="h-16 w-16 text-primary" alt="QuoreTex Logo"/>
               <span className="font-bold text-xl text-foreground">
                 QuoreTex
               </span>
@@ -38,26 +35,8 @@ const Footer = () => {
                 size="icon"
                 asChild
               >
-                <a href={COMPANY_INFO.socialMedia.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                  <Twitter className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button
-                variant="ghost" 
-                size="icon"
-                asChild
-              >
                 <a href={COMPANY_INFO.socialMedia.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <Linkedin className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button
-                variant="ghost" 
-                size="icon"
-                asChild
-              >
-                <a href={COMPANY_INFO.socialMedia.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                  <Facebook className="h-5 w-5" />
                 </a>
               </Button>
               <Button

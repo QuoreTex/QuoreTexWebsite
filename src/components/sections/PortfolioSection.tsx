@@ -69,7 +69,19 @@ const PortfolioSection = () => {
           {categories.map((category) => (
             <Button
               key={category}
-              variant={filter === category ? "default" : "outline"}
+              variant={
+                category === "All"
+                  ? "default"
+                  : category === "Web Application"
+                  ? "webapp"
+                  : category === "Custom Software"
+                  ? "custom"
+                  : category === "Mobile App"
+                  ? "mobile"
+                  : category === "Cloud Solution"
+                  ? "cloud"
+                  : "outline"
+              }
               size="sm"
               onClick={() => setFilter(category)}
               className="rounded-full"

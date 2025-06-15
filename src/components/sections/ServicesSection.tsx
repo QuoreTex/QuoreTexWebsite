@@ -68,10 +68,9 @@ const ServicesSection = () => {
             <motion.div
               key={service.id}
               variants={fadeIn("up", 0.1 * index)}
-              initial="hidden"
+              initial="rest"
               animate={inView ? "show" : "hidden"}
               whileHover="hover"
-              initial="rest"
             >
               <motion.div variants={cardHoverVariant}>
                 <Card className="h-full border border-border/50 hover:border-primary/50 transition-colors duration-300">
