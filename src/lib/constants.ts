@@ -42,7 +42,7 @@ export const SERVICES = [
 export const COMPANY_VALUES = [
   {
     title: "Quality",
-    description: "We prioritize delivering high-quality solutions that meet the highest standards of excellence.",
+    description: "We prioritize delivering high-quality solutions that drive innovation and efficiency.",
     icon: "Star",
   },
   {
@@ -51,14 +51,9 @@ export const COMPANY_VALUES = [
     icon: "Shield",
   },
   {
-    title: "Impact",
-    description: "We strive to create meaningful change and measurable results for our clients.",
-    icon: "Target",
-  },
-  {
-    title: "Excellence",
-    description: "We are committed to delivering exceptional quality in everything we do.",
-    icon: "Award",
+    title: "Sustainability",
+    description: "We develop solutions that promote environmental responsibility and long-term business sustainability.",
+    icon: "Leaf",
   },
   {
     title: "Customer Centric",

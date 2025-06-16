@@ -133,7 +133,7 @@ const Footer = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm mb-4 md:mb-0">
-            &copy; {currentYear} QuoreTex Pvt. Ltd. All rights reserved.
+            &copy; {currentYear} QuoreTex Technologies Pvt. Ltd.
           </p>
           <div className="flex space-x-6">
             <Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">

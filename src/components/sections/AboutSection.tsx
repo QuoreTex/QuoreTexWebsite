@@ -4,10 +4,10 @@ import { fadeIn, textVariant, staggerContainer } from "@/lib/animations";
 import { COMPANY_VALUES } from "@/lib/constants";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
-  Lightbulb, 
+  Star,
   Shield, 
-  Target, 
-  Award 
+  Leaf,
+  Users 
 } from "lucide-react";
 
 const AboutSection = () => {
@@ -18,16 +18,16 @@ const AboutSection = () => {
 
   const getIcon = (iconName: string) => {
     switch (iconName) {
-      case "Lightbulb":
-        return <Lightbulb className="h-8 w-8 text-primary" />;
+      case "Star":
+        return <Star className="h-8 w-8 text-primary" />;
       case "Shield":
         return <Shield className="h-8 w-8 text-primary" />;
-      case "Target":
-        return <Target className="h-8 w-8 text-primary" />;
-      case "Award":
-        return <Award className="h-8 w-8 text-primary" />;
+      case "Leaf":
+        return <Leaf className="h-8 w-8 text-primary" />;
+      case "Users":
+        return <Users className="h-8 w-8 text-primary" />;
       default:
-        return <Lightbulb className="h-8 w-8 text-primary" />;
+        return <Star className="h-8 w-8 text-primary" />;
     }
   };
 
@@ -52,7 +52,7 @@ const AboutSection = () => {
           ></motion.div>
           <motion.p 
             variants={fadeIn("up", 0.3)}
-            className="text-lg text-muted-foreground mb-8"
+            className="text-lg font-medium text-slate-700 dark:text-slate-200 mb-8 max-w-3xl mx-auto"
           >
             Founded in 2025, QuoreTex has quickly established itself as a leader in custom software development, 
             delivering innovative solutions to businesses across diverse industries.
@@ -82,17 +82,17 @@ const AboutSection = () => {
             className="space-y-6"
           >
             <h3 className="text-2xl font-bold">Our Mission</h3>
-            <p className="text-muted-foreground">
+            <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-200">
               At QuoreTex, our mission is to empower businesses through innovative technology solutions that 
               drive growth, efficiency, and competitive advantage. We combine technical expertise with 
               deep industry knowledge to deliver software that solves real-world challenges.
             </p>
             
             <h3 className="text-2xl font-bold">Our Vision</h3>
-            <p className="text-muted-foreground">
+            <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-200">
              Our vision is to develop innovative, sustainable software solutions with integrity,
              putting customers first. We strive to create technology that drives positive 
-             impact,fosters trust, and shapes a smarter, more sustainable future.
+             impact, fosters trust, and shapes a smarter, more sustainable future.
             </p>
 {/*             
             <h3 className="text-2xl font-bold">Our Approach</h3>
