@@ -5,7 +5,7 @@ import { fadeIn, staggerContainer, textVariant } from "@/lib/animations";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 pb-16 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-20 pb-16 overflow-hidden bg-lightest-blue text-blue-dark">
       {/* Gradient Background */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/20 via-background to-background"></div>
       
@@ -24,7 +24,7 @@ const HeroSection = () => {
           <motion.div variants={fadeIn("right")} className="max-w-xl">
             <motion.h1 
               variants={textVariant}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 text-blue-900 drop-shadow-lg"
             >
               <span className="text-primary">Innovating</span> Code. <br />
               <span className="text-primary">Empowering</span> Business.
@@ -32,7 +32,7 @@ const HeroSection = () => {
             
             <motion.p 
               variants={fadeIn("up", 0.2)}
-              className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed"
+              className="text-lg md:text-xl mb-8 leading-relaxed text-blue-900 drop-shadow"
             >
               We transform your business challenges into powerful software solutions 
               that drive growth, efficiency, and competitive advantage.
@@ -81,10 +81,10 @@ const HeroSection = () => {
                 >
                   <div className="flex items-center space-x-2 mb-2">
                     <div className="h-3 w-3 rounded-full bg-green-500"></div>
-                    <span className="text-sm font-medium">Project Status</span>
+                    <span className="text-sm font-medium text-white">Project Status</span>
                   </div>
-                  <div className="text-2xl font-bold text-primary">95%</div>
-                  <p className="text-xs text-muted-foreground">Completion rate</p>
+                  <div className="text-2xl font-bold text-white">95%</div>
+                  <p className="text-xs text-white">Completion rate</p>
                 </motion.div>
                 
                 <motion.div
@@ -94,7 +94,7 @@ const HeroSection = () => {
                   className="absolute -top-6 -right-6 bg-background rounded-lg shadow-lg p-4"
                 >
                   <div className="flex items-center space-x-2 mb-1">
-                    <span className="text-sm font-medium">Client Satisfaction</span>
+                    <span className="text-sm font-medium text-white">Client Satisfaction</span>
                   </div>
                   <div className="flex">
                     {[1, 2, 3, 4, 5].map((star) => (

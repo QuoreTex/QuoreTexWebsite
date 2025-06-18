@@ -19,21 +19,21 @@ const AboutSection = () => {
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case "Star":
-        return <Star className="h-8 w-8 text-primary" />;
+        return <Star className="h-14 w-14 text-white p-3 rounded-full bg-[#168AAD] shadow-lg shadow-[#168AAD]/20 border border-[#168AAD]/30 transform hover:scale-110 transition-transform duration-200" />;
       case "Shield":
-        return <Shield className="h-8 w-8 text-primary" />;
+        return <Shield className="h-14 w-14 text-white p-3 rounded-full bg-[#168AAD] shadow-lg shadow-[#168AAD]/20 border border-[#168AAD]/30 transform hover:scale-110 transition-transform duration-200" />;
       case "Leaf":
-        return <Leaf className="h-8 w-8 text-primary" />;
+        return <Leaf className="h-14 w-14 text-white p-3 rounded-full bg-[#168AAD] shadow-lg shadow-[#168AAD]/20 border border-[#168AAD]/30 transform hover:scale-110 transition-transform duration-200" />;
       case "Users":
-        return <Users className="h-8 w-8 text-primary" />;
+        return <Users className="h-14 w-14 text-white p-3 rounded-full bg-[#168AAD] shadow-lg shadow-[#168AAD]/20 border border-[#168AAD]/30 transform hover:scale-110 transition-transform duration-200" />;
       default:
-        return <Star className="h-8 w-8 text-primary" />;
+        return <Star className="h-14 w-14 text-white p-3 rounded-full bg-[#168AAD] shadow-lg shadow-[#168AAD]/20 border border-[#168AAD]/30 transform hover:scale-110 transition-transform duration-200" />;
     }
   };
 
   return (
-    <section ref={ref} className="py-20 ">
-      <div className="container mx-auto px-4 p-4 md:px-6  bg-[#0096D6] rounded ">
+    <section ref={ref} id="vision-mission" className="py-20 bg-white">
+      <div className="container mx-auto px-4 p-4 md:px-6 bg-white rounded">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -42,17 +42,17 @@ const AboutSection = () => {
         >
           <motion.h2 
             variants={textVariant}
-            className="text-3xl md:text-4xl font-bold mb-4 text-green-400"
+            className="text-3xl md:text-4xl font-bold mb-4 text-[#1E3A8A]"
           >
-            About <span className="text-green">QuoreTex</span>
+            About <span className="text-[#168AAD]">QuoreTex</span>
           </motion.h2>
           <motion.div 
             variants={fadeIn("up", 0.2)}
-            className="w-24 h-1 bg-primary mx-auto mb-6"
+            className="w-24 h-1 bg-[#168AAD] mx-auto mb-6"
           ></motion.div>
           <motion.p 
             variants={fadeIn("up", 0.3)}
-            className="text-lg font-medium text-slate-700 dark:text-slate-200 mb-8 max-w-3xl mx-auto"
+            className="text-lg font-medium text-[#168AAD] mb-8 max-w-3xl mx-auto"
           >
             Founded in 2025, QuoreTex has quickly established itself as a leader in custom software development, 
             delivering innovative solutions to businesses across diverse industries.
@@ -81,15 +81,15 @@ const AboutSection = () => {
             animate={inView ? "show" : "hidden"}
             className="space-y-6"
           >
-            <h3 className="text-2xl font-bold">Our Mission</h3>
-            <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-200">
+            <h3 className="text-2xl font-bold text-[#1E3A8A]">Our Mission</h3>
+            <p className="text-lg leading-relaxed text-[#168AAD]">
               At QuoreTex, our mission is to empower businesses through innovative technology solutions that 
               drive growth, efficiency, and competitive advantage. We combine technical expertise with 
               deep industry knowledge to deliver software that solves real-world challenges.
             </p>
             
-            <h3 className="text-2xl font-bold">Our Vision</h3>
-            <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-200">
+            <h3 className="text-2xl font-bold text-[#1E3A8A]">Our Vision</h3>
+            <p className="text-lg leading-relaxed text-[#168AAD]">
              Our vision is to develop innovative, sustainable software solutions with integrity,
              putting customers first. We strive to create technology that drives positive 
              impact, fosters trust, and shapes a smarter, more sustainable future.
@@ -110,7 +110,8 @@ const AboutSection = () => {
           animate={inView ? "show" : "hidden"}
           className="text-2xl md:text-3xl font-bold text-center mb-12"
         >
-          Our Values
+          <span className="text-[#1E3A8A]">Our</span>{" "}
+          <span className="text-[#168AAD]">Values</span>
         </motion.h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

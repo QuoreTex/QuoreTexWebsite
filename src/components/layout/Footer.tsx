@@ -102,6 +102,16 @@ const Footer = () => {
                   Maintenance & Support
                 </Link>
               </li>
+              <li>
+                <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
+                  RAD Development
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
+                  AI Solutions
+                </Link>
+              </li>
             </ul>
           </div>
           
@@ -111,7 +121,17 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span className="text-muted-foreground">{COMPANY_INFO.address}</span>
+                <div className="text-muted-foreground">
+                  <div className="font-medium">{COMPANY_INFO.addresses.india.label}</div>
+                  <div className="whitespace-pre-line">{COMPANY_INFO.addresses.india.address}</div>
+                </div>
+              </li>
+              <li className="flex items-start space-x-3">
+                <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                <div className="text-muted-foreground">
+                  <div className="font-medium">{COMPANY_INFO.addresses.uk.label}</div>
+                  <div className="whitespace-pre-line">{COMPANY_INFO.addresses.uk.address}</div>
+                </div>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-primary shrink-0" />

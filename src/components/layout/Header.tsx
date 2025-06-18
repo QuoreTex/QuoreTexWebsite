@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Moon, Sun } from "lucide-react";
-import { useTheme } from "@/components/ui/theme-provider";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -12,7 +11,6 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
 
   // Once mounted on client, we can show the UI
   useEffect(() => {
@@ -35,8 +33,8 @@ const Header = () => {
   const closeMenu = () => setIsOpen(false);
 
   const headerClasses = cn(
-    "fixed top-0 left-0 right-0 z-50 transition-all duration-300 header-darker",
-    scrolled ? "shadow-sm py-2" : "py-4"
+    "fixed top-0 left-0 right-0 z-50 transition-all duration-300 header-gradient",
+    scrolled ? "shadow-lg py-2" : "py-4"
   );
 
   if (!mounted) {
@@ -76,34 +74,10 @@ const Header = () => {
             >
               <Link to="/contact">Get Started</Link>
             </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? (
-                <Sun className="h-5 w-5" />
-              ) : (
-                <Moon className="h-5 w-5" />
-              )}
-            </Button>
           </nav>
 
           {/* Mobile Nav Toggle */}
           <div className="flex items-center md:hidden space-x-4">
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? (
-                <Sun className="h-5 w-5" />
-              ) : (
-                <Moon className="h-5 w-5" />
-              )}
-            </Button>
             <Button
               variant="ghost"
               size="icon"

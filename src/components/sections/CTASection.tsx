@@ -19,11 +19,12 @@ const CTASection = () => {
           animate={inView ? "show" : "hidden"}
           className="max-w-4xl mx-auto text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white drop-shadow-lg">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-            Let's work together to create innovative software solutions that drive growth and success.
+          <p className="text-lg mb-8 max-w-2xl mx-auto text-white/90 drop-shadow">
+            Let's work together to create innovative software solutions that drive
+            growth and success.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button

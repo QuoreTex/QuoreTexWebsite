@@ -5,7 +5,9 @@ import {
   Globe, 
   Smartphone, 
   Cloud, 
-  Wrench 
+  Wrench,
+  Brain,
+  Zap 
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -22,22 +24,26 @@ const ServicesSection = () => {
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case "Code2":
-        return <Code2 className="h-10 w-10 text-primary" />;
+        return <Code2 className="h-10 w-10 text-white" />;
       case "Globe":
-        return <Globe className="h-10 w-10 text-primary" />;
+        return <Globe className="h-10 w-10 text-white" />;
       case "Smartphone":
-        return <Smartphone className="h-10 w-10 text-primary" />;
+        return <Smartphone className="h-10 w-10 text-white" />;
       case "Cloud":
-        return <Cloud className="h-10 w-10 text-primary" />;
+        return <Cloud className="h-10 w-10 text-white" />;
       case "Wrench":
-        return <Wrench className="h-10 w-10 text-primary" />;
+        return <Wrench className="h-10 w-10 text-white" />;
+      case "Brain":
+        return <Brain className="h-10 w-10 text-white" />;
+      case "Zap":
+        return <Zap className="h-10 w-10 text-white" />;
       default:
-        return <Code2 className="h-10 w-10 text-primary" />;
+        return <Code2 className="h-10 w-10 text-white" />;
     }
   };
 
   return (
-    <section ref={ref} className="py-20">
+    <section ref={ref} id="services-list" className="py-20 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial="hidden"
@@ -46,17 +52,17 @@ const ServicesSection = () => {
         >
           <motion.h2 
             variants={textVariant}
-            className="text-3xl md:text-4xl font-bold mb-4"
+            className="text-3xl md:text-4xl font-bold mb-4 text-[#1E3A8A]"
           >
-            Our <span className="text-primary">Services</span>
+            Our <span className="text-[#168AAD]">Services</span>
           </motion.h2>
           <motion.div 
             variants={fadeIn("up", 0.2)}
-            className="w-24 h-1 bg-primary mx-auto mb-6"
+            className="w-24 h-1 bg-[#168AAD] mx-auto mb-6"
           ></motion.div>
           <motion.p 
             variants={fadeIn("up", 0.3)}
-            className="text-lg text-muted-foreground"
+            className="text-lg text-[#168AAD]"
           >
             We offer comprehensive software development services tailored to meet your unique business needs.
             From initial concept to deployment and ongoing support, we're with you at every step.
@@ -73,23 +79,23 @@ const ServicesSection = () => {
               whileHover="hover"
             >
               <motion.div variants={cardHoverVariant}>
-                <Card className="h-full border border-border/50 hover:border-primary/50 transition-colors duration-300">
+                <Card className="h-full bg-[#1A759F] transition-colors duration-300">
                   <CardContent className="p-6">
-                    <div className="rounded-full bg-primary/10 w-16 h-16 flex items-center justify-center mb-4">
+                    <div className="rounded-full bg-white/20 w-16 h-16 flex items-center justify-center mb-4">
                       {getIcon(service.icon)}
                     </div>
-                    <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                    <p className="text-muted-foreground mb-6">{service.description}</p>
+                    <h3 className="text-xl font-semibold mb-3 text-white">{service.title}</h3>
+                    <p className="text-white/90 mb-6">{service.description}</p>
                     <Button
-                      variant="ghost"
-                      className="group text-primary hover:text-primary-foreground"
+                      variant="outline"
+                      className="group text-white hover:text-[#1A759F] hover:bg-white"
                       asChild
                     >
                       <Link to="/services">
                         Learn More
                         <svg
-                          xmlns="E:\bitsarambh\pratiks new folder\project\src\im"
-                          className="h-4 w-4 ml-2 transition-transform duration-300 group-hover:translate-x-1"
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-4 w-4 ml-2 text-white transition-transform duration-300 group-hover:translate-x-1"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -98,7 +104,7 @@ const ServicesSection = () => {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={2}
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            d="M9 5l7 7-7 7"
                           />
                         </svg>
                       </Link>
@@ -109,17 +115,6 @@ const ServicesSection = () => {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          variants={fadeIn("up", 0.5)}
-          initial="hidden"
-          animate={inView ? "show" : "hidden"}
-          className="text-center"
-        >
-          <Button size="lg" asChild className="rounded-full px-8">
-            <Link to="/contact">Get in Touch</Link>
-          </Button>
-        </motion.div>
       </div>
     </section>
   );

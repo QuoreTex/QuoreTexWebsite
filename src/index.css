@@ -7,50 +7,43 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: #1E6091; /* faded blue text */
-  background: linear-gradient(
-    120deg,
-    #D9ED92 0%,
-    #B5E48C 12%,
-    #99D98C 24%,
-    #76C893 36%,
-    #52B69A 48%,
-    #34A0A4 60%,
-    #168AAD 72%,
-    #1A759F 84%,
-    #1E6091 92%,
-    #184E77 100%
-  ); /* full palette gradient */
+  /* Three main blue shades */
+  --blue-dark: #184E77;    /* Darkest blue */
+  --blue-medium: #1A759F;  /* Medium blue */
+  --blue-light: #168AAD;   /* Lighter medium blue */
+  
+  /* Text colors on different backgrounds */
+  --text-on-dark: #FFFFFF;
+  --text-on-light: #184E77;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Base styles */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--text-on-dark);
+  background: linear-gradient(135deg, var(--blue-light) 0%, var(--blue-medium) 50%, var(--blue-dark) 100%);
+}
+
+/* Text styles */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-on-dark);
 }
 
 a {
   font-weight: 500;
-  color: #168AAD; /* medium blue */
+  color: var(--text-on-dark);
   text-decoration: inherit;
+  transition: color 0.3s ease;
 }
+
 a:hover {
-  color: #52B69A; /* teal */
+  color: var(--blue-light);
+  opacity: 0.9;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
+/* Button styles */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -58,152 +51,101 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #52B69A; /* teal */
-  color: #ffffff;
+  background-color: var(--blue-light);
+  color: var(--text-on-dark);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color 0.3s, border-color 0.3s;
 }
+
 button:hover {
-  border-color: #34A0A4; /* blue-teal */
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  background-color: var(--blue-medium);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #1E6091;
-    background: linear-gradient(
-      120deg,
-      #D9ED92 0%,
-      #B5E48C 15%,
-      #99D98C 30%,
-      #76C893 45%,
-      #52B69A 60%,
-      #34A0A4 75%,
-      #168AAD 85%,
-      #1A759F 92%,
-      #1E6091 96%,
-      #184E77 100%
-    );
-  }
-  a:hover {
-    color: #168AAD;
-  }
-  button {
-    background-color: #34A0A4;
-  }
+/* Section backgrounds */
+.section-dark {
+  background-color: var(--blue-dark);
+  color: var(--text-on-dark);
 }
 
-@layer base {
-  :root {
-    --background: 74 68% 89%; /* #D9ED92 */
-    --foreground: 215 100% 22%; /* #1E6091 */
-    --card: 0 0% 100%;
-    --card-foreground: 215 100% 22%;
-
-    --popover: 74 68% 89%;
-    --popover-foreground: 215 100% 22%;
-
-    --primary: 196 74% 45%; /* #168AAD */
-    --primary-foreground: 0 0% 100%;
-    --secondary: 145 52% 76%; /* #99D98C */
-    --secondary-foreground: 0 0% 15%;
-
-    --muted: 160 44% 80%; /* #76C893 */
-    --muted-foreground: 215 100% 22%;
-
-    --accent: 173 49% 58%; /* #52B69A */
-    --accent-foreground: 215 100% 22%;
-
-    --destructive: 0 84.2% 90%;
-    --destructive-foreground: 0 0% 20%;
-
-    --border: 0 0% 90%;
-    --input: 0 0% 92%;
-    --ring: 0 0% 20%;
-
-    --radius: 0.5rem;
-  }
-
-  .light {
-    --background: 74 68% 92%; /* lighter #D9ED92 */
-    --foreground: 215 100% 22%;
-  }
-
-  .dark {
-    --background: 217 71% 15%; /* #184E77 background */
-    --foreground: 210 40% 98%; /* Light text */
-    --card: 217 71% 20%;
-    --card-foreground: 210 40% 98%;
-    --popover: 217 71% 15%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 196 74% 45%; /* #168AAD */
-    --primary-foreground: 0 0% 100%;
-    --secondary: 217 71% 25%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217 71% 20%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 173 49% 58%; /* #52B69A */
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217 71% 25%;
-    --input: 217 71% 20%;
-    --ring: 224 71% 45%;
-  }
+.section-medium {
+  background-color: var(--blue-medium);
+  color: var(--text-on-dark);
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+.section-light {
+  background-color: var(--blue-light);
+  color: var(--text-on-dark);
 }
 
-/* Custom dark mode styles */
-.dark body {
-  background: linear-gradient(
-    120deg,
-    #184E77 0%,
-    #1E6091 20%,
-    #1A759F 40%,
-    #168AAD 60%,
-    #34A0A4 80%,
-    #52B69A 100%
-  );
-}
-
-.dark .header-darker {
-  background: linear-gradient(90deg, #184E77 0%, #1A759F 60%, #168AAD 100%) !important;
-  box-shadow: 0 2px 12px 0 rgba(24, 78, 119, 0.3);
-}
-
-/* Light mode styles */
-body {
-  background: linear-gradient(
-    120deg,
-    #D9ED92 0%,
-    #B5E48C 12%,
-    #99D98C 24%,
-    #76C893 36%,
-    #52B69A 48%,
-    #34A0A4 60%,
-    #168AAD 72%,
-    #1A759F 84%,
-    #1E6091 92%,
-    #184E77 100%
-  );
-}
-
+/* Header & Footer */
 .header-darker {
-  background: linear-gradient(90deg, #1A759F 0%, #1E6091 60%, #184E77 100%) !important;
-  box-shadow: 0 2px 12px 0 rgba(24, 78, 119, 0.12);
+  background: linear-gradient(90deg, var(--blue-dark) 0%, var(--blue-medium) 100%);
+  box-shadow: 0 2px 12px 0 rgba(24, 78, 119, 0.2);
 }
 
-.text-accent-dark {
-  color: #184E77;
+.footer {
+  background: var(--blue-dark);
+  color: var(--text-on-dark);
+}
+
+/* Header gradient: blue to light blue */
+.header-gradient {
+  background: linear-gradient(90deg, #184E77 0%, #1A759F 60%, #A8D8FF 100%);
+  color: var(--text-on-dark);
+}
+
+/* Card backgrounds */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom gradients */
+.gradient-blue {
+  background: linear-gradient(135deg, var(--blue-light) 0%, var(--blue-medium) 50%, var(--blue-dark) 100%);
+}
+
+.gradient-reverse {
+  background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-medium) 50%, var(--blue-light) 100%);
+}
+
+/* Theme variables for Tailwind/shadcn components */
+:root {
+  --radius: 0.5rem;
+  
+  --background: var(--blue-dark);
+  --foreground: var(--text-on-dark);
+  
+  --card: var(--blue-medium);
+  --card-foreground: var(--text-on-dark);
+  
+  --popover: var(--blue-dark);
+  --popover-foreground: var(--text-on-dark);
+  
+  --primary: var(--blue-light);
+  --primary-foreground: var(--text-on-dark);
+  
+  --secondary: var(--blue-medium);
+  --secondary-foreground: var(--text-on-dark);
+  
+  --muted: rgba(255, 255, 255, 0.1);
+  --muted-foreground: rgba(255, 255, 255, 0.7);
+  
+  --accent: var(--blue-light);
+  --accent-foreground: var(--text-on-dark);
+  
+  --border: rgba(255, 255, 255, 0.1);
+  --input: var(--blue-medium);
+  --ring: var(--blue-light);
+}
+
+/* Lightest blue for hero section */
+.bg-lightest-blue {
+  background-color: #e6f6ff !important;
+}
+
+/* Dark blue text utility class */
+.text-blue-dark {
+  color: #184E77 !important;
 }

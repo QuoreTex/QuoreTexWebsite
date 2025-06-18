@@ -56,21 +56,40 @@ const ContactSection = () => {
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     
-    // Simulate API call and use form data
-    console.log('Sending form data:', data);
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    
-    toast({
-      title: "Message sent successfully!",
-      description: "We'll get back to you as soon as possible.",
-    });
-    
-    form.reset();
-    setIsSubmitting(false);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || 'Failed to send message');
+      }
+
+      toast({
+        title: "Message sent successfully!",
+        description: "We'll get back to you as soon as possible.",
+      });
+      
+      form.reset();
+    } catch (error) {
+      console.error('Error sending message:', error);
+      toast({
+        title: "Error sending message",
+        description: error instanceof Error ? error.message : "Please try again later",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <section ref={ref} id="contact" className="py-20">
+    <section ref={ref} id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial="hidden"
@@ -79,17 +98,17 @@ const ContactSection = () => {
         >
           <motion.h2 
             variants={textVariant}
-            className="text-3xl md:text-4xl font-bold mb-4 text-accent-dark"
+            className="text-3xl md:text-4xl font-bold mb-4"
           >
-            Get in <span className="text-primary">Touch</span>
+            <span className="text-[#1E3A8A]">Get in</span> <span className="text-[#168AAD]">Touch</span>
           </motion.h2>
           <motion.div 
             variants={fadeIn("up", 0.2)}
-            className="w-24 h-1 bg-primary mx-auto mb-6"
+            className="w-24 h-1 bg-[#168AAD] mx-auto mb-6"
           ></motion.div>
           <motion.p 
             variants={fadeIn("up", 0.3)}
-            className="text-lg text-muted-foreground"
+            className="text-lg text-[#1E3A8A]/80"
           >
             Have a project in mind? Let's discuss how we can help you achieve your goals.
           </motion.p>
@@ -102,17 +121,17 @@ const ContactSection = () => {
             animate={inView ? "show" : "hidden"}
           >
             <div className="space-y-6 md:pr-8">
-              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold mb-6 text-[#1E3A8A]">Contact Information</h3>
               
               <div className="flex items-start space-x-4">
                 <div className="bg-primary/10 p-3 rounded-full">
-                  <Mail className="h-6 w-6 text-primary" />
+                  <Mail className="h-6 w-6 text-[#168AAD]" />
                 </div>
                 <div>
-                  <h4 className="text-base font-medium mb-1">Email Us</h4>
+                  <h4 className="text-base font-medium mb-1 text-[#1E3A8A]">Email Us</h4>
                   <a 
                     href={`mailto:${COMPANY_INFO.email}`} 
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-[#168AAD] hover:text-[#1E3A8A] transition-colors"
                   >
                     {COMPANY_INFO.email}
                   </a>
@@ -121,13 +140,13 @@ const ContactSection = () => {
               
               <div className="flex items-start space-x-4">
                 <div className="bg-primary/10 p-3 rounded-full">
-                  <Phone className="h-6 w-6 text-primary" />
+                  <Phone className="h-6 w-6 text-[#168AAD]" />
                 </div>
                 <div>
-                  <h4 className="text-base font-medium mb-1">Call Us</h4>
+                  <h4 className="text-base font-medium mb-1 text-[#1E3A8A]">Call Us</h4>
                   <a 
                     href={`tel:${COMPANY_INFO.phone}`} 
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-[#168AAD] hover:text-[#1E3A8A] transition-colors"
                   >
                     {COMPANY_INFO.phone}
                   </a>
@@ -136,18 +155,27 @@ const ContactSection = () => {
               
               <div className="flex items-start space-x-4">
                 <div className="bg-primary/10 p-3 rounded-full">
-                  <MapPin className="h-6 w-6 text-primary" />
+                  <MapPin className="h-6 w-6 text-[#168AAD]" />
                 </div>
                 <div>
-                  <h4 className="text-base font-medium mb-1">Visit Us</h4>
-                  <address className="text-muted-foreground not-italic">
-                    {COMPANY_INFO.address}
+                  <h4 className="text-base font-medium mb-1 text-[#1E3A8A]">Visit Us</h4>
+                  <address className="not-italic">
+                    <div className="space-y-4">
+                      <div>
+                        <div className="font-medium text-[#1E3A8A]">{COMPANY_INFO.addresses.india.label}</div>
+                        <div className="whitespace-pre-line text-[#168AAD]">{COMPANY_INFO.addresses.india.address}</div>
+                      </div>
+                      <div>
+                        <div className="font-medium text-[#1E3A8A]">{COMPANY_INFO.addresses.uk.label}</div>
+                        <div className="whitespace-pre-line text-[#168AAD]">{COMPANY_INFO.addresses.uk.address}</div>
+                      </div>
+                    </div>
                   </address>
                 </div>
               </div>
               
               <div className="mt-10">
-                <h4 className="text-lg font-medium mb-4">Our Office Location</h4>
+                <h4 className="text-lg font-medium mb-4 text-[#1E3A8A]">Our Office Location</h4>
                 <div className="h-64 rounded-lg overflow-hidden">
                   <iframe
                     title="Office Location"
@@ -168,7 +196,7 @@ const ContactSection = () => {
             animate={inView ? "show" : "hidden"}
           >
             <div className="bg-card rounded-xl shadow-sm p-8">
-              <h3 className="text-2xl font-bold mb-6">Send Us a Message</h3>
+              <h3 className="text-2xl font-bold mb-6 text-slate-800 dark:text-slate-100">Send Us a Message</h3>
               
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">

@@ -15,20 +15,20 @@ const FeaturesSection = () => {
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case "Users":
-        return <Users className="h-10 w-10 text-primary" />;
+        return <Users className="h-10 w-10 text-white" />;
       case "Workflow":
-        return <Activity className="h-10 w-10 text-primary" />;
+        return <Activity className="h-10 w-10 text-white" />;
       case "BarChart4":
-        return <BarChart4 className="h-10 w-10 text-primary" />;
+        return <BarChart4 className="h-10 w-10 text-white" />;
       case "HeadsetHelp":
-        return <HeadsetHelp className="h-10 w-10 text-primary" />;
+        return <HeadsetHelp className="h-10 w-10 text-white" />;
       default:
-        return <Users className="h-10 w-10 text-primary" />;
+        return <Users className="h-10 w-10 text-white" />;
     }
   };
 
   return (
-    <section ref={ref} className="py-20">
+    <section ref={ref} className="py-20 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial="hidden"
@@ -37,17 +37,17 @@ const FeaturesSection = () => {
         >
           <motion.h2 
             variants={textVariant}
-            className="text-3xl md:text-4xl font-bold mb-4 text-accent-dark"
+            className="text-3xl md:text-4xl font-bold mb-4"
           >
-            Why Choose <span className="text-primary">QuoreTex</span>
+            <span className="text-[#1E3A8A]">Why Choose</span> <span className="text-[#168AAD]">QuoreTex</span>
           </motion.h2>
           <motion.div 
             variants={fadeIn("up", 0.2)}
-            className="w-24 h-1 bg-primary mx-auto mb-6"
+            className="w-24 h-1 bg-[#168AAD] mx-auto mb-6"
           ></motion.div>
           <motion.p 
             variants={fadeIn("up", 0.3)}
-            className="text-lg text-muted-foreground"
+            className="text-lg text-[#1E3A8A]"
           >
             We deliver exceptional value through our expertise, client-centric approach, and commitment to quality.
           </motion.p>
@@ -84,8 +84,8 @@ const FeaturesSection = () => {
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl font-bold mb-4">Ready to transform your business?</h3>
-              <p className="text-muted-foreground mb-6">
+              <h3 className="text-2xl font-bold mb-4 text-[#1E3A8A]">Ready to transform your business?</h3>
+              <p className="text-[#1E3A8A]/80 mb-6">
                 Our team of experts is ready to help you leverage technology to achieve your business goals. 
                 Let's work together to create a solution that's tailored to your unique needs.
               </p>
@@ -94,19 +94,19 @@ const FeaturesSection = () => {
                   <svg className="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Free initial consultation</span>
+                  <span className="text-[#1E3A8A]">Free initial consultation</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Transparent pricing and timeline</span>
+                  <span className="text-[#1E3A8A]">Transparent pricing and timeline</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Ongoing support and maintenance</span>
+                  <span className="text-[#1E3A8A]">Ongoing support and maintenance</span>
                 </li>
               </ul>
             </div>

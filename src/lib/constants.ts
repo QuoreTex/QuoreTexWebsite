@@ -37,6 +37,18 @@ export const SERVICES = [
     description: "Ongoing maintenance, updates, and technical support for your software applications.",
     icon: "Wrench",
   },
+  {
+    id: 6,
+    title: "RAD Development",
+    description: "Rapid Application Development with iterative prototyping and quick delivery of functional software.",
+    icon: "Zap",
+  },
+  {
+    id: 7,
+    title: "AI Solutions",
+    description: "Custom AI and machine learning solutions to automate processes and gain valuable insights from your data.",
+    icon: "Brain",
+  },
 ];
 
 export const COMPANY_VALUES = [
@@ -153,7 +165,16 @@ export const COMPANY_FEATURES = [
 
 export const COMPANY_INFO = {
   name: "QuoreTex Technologies Pvt. Ltd.",
-  address: "Flat No.201 Tulasi Pearl , Near Navnath Mandir VMV Road, Amravati, Maharashtra 444604",
+  addresses: {
+    india: {
+      label: "Headquarters – India 🇮🇳",
+      address: "Flat No. 201, Tulasi Pearl,\nNear Navnath Mandir, VMV Road,\nAmravati, Maharashtra – 444604"
+    },
+    uk: {
+      label: "Branch Office – United Kingdom 🇬🇧",
+      address: "92 Meadowbank Gardens,\nHounslow, London,\nEngland – TW5 9TU"
+    }
+  },
   email: "info@quore-tex.com",
   phone: "+91 90220 77079",
   socialMedia: {
