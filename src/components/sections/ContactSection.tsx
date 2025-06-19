@@ -175,8 +175,8 @@ const ContactSection = () => {
               </div>
               
               <div className="mt-10">
-                <h4 className="text-lg font-medium mb-4 text-[#1E3A8A]">Our Office Location</h4>
-                <div className="h-64 rounded-lg overflow-hidden">
+                <h4 className="text-lg font-medium mb-4 text-[#1E3A8A]">Our HeadQuarter Location</h4>
+                <div className="h-48 rounded-lg overflow-hidden">
                   <iframe
                     title="Office Location"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.314964964624!2d77.7581940752006!3d20.96437918072659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd6a300001b244f%3A0x8b15e45ab1d49909!2sTulsi%20Pearl%20Apartment!5e0!3m2!1sen!2sin!4v1718470000000!5m2!1sen!2sin"

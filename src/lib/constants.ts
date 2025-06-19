@@ -33,21 +33,21 @@ export const SERVICES = [
   },
   {
     id: 5,
-    title: "Maintenance & Support",
-    description: "Ongoing maintenance, updates, and technical support for your software applications.",
-    icon: "Wrench",
-  },
-  {
-    id: 6,
     title: "RAD Development",
     description: "Rapid Application Development with iterative prototyping and quick delivery of functional software.",
     icon: "Zap",
   },
   {
-    id: 7,
+    id: 6,
     title: "AI Solutions",
     description: "Custom AI and machine learning solutions to automate processes and gain valuable insights from your data.",
     icon: "Brain",
+  },
+  {
+    id: 7,
+    title: "Maintenance & Support",
+    description: "Ongoing maintenance, updates, and technical support for your software applications.",
+    icon: "Wrench",
   },
 ];
 

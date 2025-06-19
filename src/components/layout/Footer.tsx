@@ -23,11 +23,14 @@ const Footer = () => {
             <Link to="/" className="flex items-center space-x-2">
               <img src={image} className="h-16 w-16 text-primary" alt="QuoreTex Logo"/>
               <span className="font-bold text-xl text-foreground">
-                QuoreTex
+                QuoreTex Technologies Pvt. Ltd.
               </span>
             </Link>
             <p className="text-muted-foreground max-w-xs">
+                 INNOVATE. CONNECT. DELIVER. <br />
+
               Innovating code. Empowering business through custom software solutions.
+            
             </p>
             <div className="flex space-x-4">
               <Button
@@ -36,7 +39,9 @@ const Footer = () => {
                 asChild
               >
                 <a href={COMPANY_INFO.socialMedia.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                  <Linkedin className="h-5 w-5" />
+                  <span className="inline-flex items-center justify-center rounded-full bg-white p-1">
+                    <Linkedin className="h-5 w-5" color="#0077B5" />
+                  </span>
                 </a>
               </Button>
               <Button
@@ -45,7 +50,9 @@ const Footer = () => {
                 asChild
               >
                 <a href={COMPANY_INFO.socialMedia.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                  <Instagram className="h-5 w-5" />
+                  <span className="inline-flex items-center justify-center rounded-full bg-white p-1">
+                    <Instagram className="h-5 w-5" color="#E4405F" />
+                  </span>
                 </a>
               </Button>
             </div>
@@ -53,7 +60,7 @@ const Footer = () => {
           
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
+            <h3 className="font-semibold text-lg mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">Home</Link>

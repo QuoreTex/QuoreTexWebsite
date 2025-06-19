@@ -77,6 +77,7 @@ const ServicesSection = () => {
               initial="rest"
               animate={inView ? "show" : "hidden"}
               whileHover="hover"
+              className={index === SERVICES.length - 1 ? "lg:col-start-2" : ""}
             >
               <motion.div variants={cardHoverVariant}>
                 <Card className="h-full bg-[#1A759F] transition-colors duration-300">

@@ -33,7 +33,7 @@ const Header = () => {
   const closeMenu = () => setIsOpen(false);
 
   const headerClasses = cn(
-    "fixed top-0 left-0 right-0 z-50 transition-all duration-300 header-gradient",
+    "fixed top-0 left-0 right-0 z-50 transition-all duration-300 header bg-[#ffffff]/95 backdrop-blur-md",
     scrolled ? "shadow-lg py-2" : "py-4"
   );
 
@@ -47,19 +47,22 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
             <img src={image} className="h-16 w-16 text-primary"/>
-            <span className="font-bold text-xl md:text-2xl text-foreground">
-              QuoreTex Technologies
-            </span>
+            <span className="font-bold text-xl md:text-2xl">
+  <span className="text-[#168AAD]">Quore</span>
+  <span className="text-[#1E3A8A]">Tex</span>
+</span>
+
+
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8 ">
             <ul className="flex space-x-6">
               {NAV_LINKS.map((link) => (
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-foreground hover:text-primary transition-colors duration-200"
+                    className="text-[#184E77] hover:text-primary transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
