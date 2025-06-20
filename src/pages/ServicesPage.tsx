@@ -3,10 +3,28 @@ import ServicesSection from "@/components/sections/ServicesSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
 import CTASection from "@/components/sections/CTASection";
 import { fadeIn } from "@/lib/animations";
+import { Helmet } from "react-helmet";
 
 const ServicesPage = () => {
   return (
     <div className="bg-white">
+      <Helmet>
+        <title>Our Services - QuoreTex Technologies</title>
+        <meta name="description" content="Explore the range of software development, web, mobile, and cloud services offered by QuoreTex Technologies." />
+        <meta name="keywords" content="software services, web development, mobile app development, cloud solutions, QuoreTex" />
+        <link rel="canonical" href="https://quore-tex.com/services" />
+        {/* Open Graph */}
+        <meta property="og:title" content="Our Services - QuoreTex Technologies" />
+        <meta property="og:description" content="Explore the range of software development, web, mobile, and cloud services offered by QuoreTex Technologies." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://quore-tex.com/services" />
+        <meta property="og:image" content="https://quore-tex.com/images/preview.png" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Our Services - QuoreTex Technologies" />
+        <meta name="twitter:description" content="Explore the range of software development, web, mobile, and cloud services offered by QuoreTex Technologies." />
+        <meta name="twitter:image" content="https://quore-tex.com/images/preview.png" />
+      </Helmet>
       <motion.section 
         initial="hidden"
         animate="show"

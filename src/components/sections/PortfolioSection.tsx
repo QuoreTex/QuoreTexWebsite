@@ -48,24 +48,6 @@ const PortfolioSection = () => {
           </motion.p>
         </motion.div>
 
-        {/* Low-code card (fancy) */}
-        <motion.div
-          variants={fadeIn()}
-          className="max-w-4xl mx-auto mb-12"
-        >
-          <motion.div 
-            whileHover={{ scale: 1.04, boxShadow: '0 8px 32px 0 rgba(34,197,94,0.15)' }} 
-            className="relative bg-gradient-to-br from-green-100 via-white to-green-50 rounded-2xl p-6 shadow-lg border-2 border-green-200 overflow-hidden transition-all duration-300"
-          >
-            <h3 className="font-extrabold text-xl text-green-700 mb-3 tracking-wide drop-shadow">Low-code</h3>
-            <div className="flex flex-wrap gap-2">
-              {['Outsystem', 'Retool'].map(tool => (
-                <span key={tool} className="bg-green-200/80 text-green-900 px-3 py-1 rounded-full text-xs font-semibold shadow hover:scale-110 hover:bg-green-300/90 hover:shadow-lg transition-all duration-200 cursor-pointer">{tool}</span>
-              ))}
-            </div>
-          </motion.div>
-        </motion.div>
-
         {/* Conditionally render the projects grid */}
         {showProjects && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">

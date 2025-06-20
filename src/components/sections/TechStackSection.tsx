@@ -28,8 +28,9 @@ const TechStackSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600">
-            Our Tech Stack
+          <h2 className="text-5xl font-bold mb-6">
+            <span style={{ color: '#1E3A8A' }}>Our </span>{' '}
+            <span style={{ color: '#168AAD' }}>Tech Stack</span>
           </h2>
           <p className="text-slate-600 max-w-2xl mx-auto text-lg">
             Leveraging cutting-edge technologies to build the future
@@ -62,6 +63,55 @@ const TechStackSection: React.FC = () => {
                   bg-clip-text text-transparent group-hover:scale-110
                   transition duration-300
                 `}>
+                  {tech.name}
+                </h3>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Low-code Platforms Section */}
+        <motion.div
+          variants={fadeIn('up')}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="text-center mt-20 mb-8"
+        >
+          <h3 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-blue-600">
+            Low-code Platforms
+          </h3>
+          <p className="text-slate-600 max-w-xl mx-auto text-md mb-8">
+            Accelerate development with powerful low-code tools
+          </p>
+        </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          {[
+            { name: 'Low-code', color: 'from-green-400 to-blue-400' },
+            { name: 'Outsystem', color: 'from-pink-500 to-yellow-500' },
+            { name: 'Retool', color: 'from-blue-500 to-indigo-500' },
+          ].map((tech, index) => (
+            <motion.div
+              key={tech.name}
+              variants={fadeIn('up')}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              custom={index * 0.1}
+              whileHover={{ scale: 1.05, filter: 'brightness(1.1)' }}
+              className="group relative"
+            >
+              <div className={
+                `absolute -inset-0.5 rounded-xl bg-gradient-to-r ${tech.color} opacity-50 blur-sm group-hover:opacity-75 transition duration-500`
+              } />
+              <div className="
+                relative flex items-center justify-center h-32 rounded-lg
+                bg-white backdrop-blur-sm border border-slate-200
+                p-6 transition duration-300 group-hover:shadow-lg
+              ">
+                <h3 className={
+                  `text-xl font-bold bg-gradient-to-r ${tech.color} bg-clip-text text-transparent group-hover:scale-110 transition duration-300`
+                }>
                   {tech.name}
                 </h3>
               </div>

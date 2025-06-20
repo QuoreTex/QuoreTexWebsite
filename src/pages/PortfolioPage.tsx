@@ -2,10 +2,28 @@ import { motion } from "framer-motion";
 import PortfolioSection from "@/components/sections/PortfolioSection";
 import CTASection from "@/components/sections/CTASection";
 import { fadeIn } from "@/lib/animations";
+import { Helmet } from "react-helmet";
 
 const PortfolioPage = () => {
   return (
     <div className="bg-white">
+      <Helmet>
+        <title>Portfolio - QuoreTex Technologies</title>
+        <meta name="description" content="Discover our portfolio of successful software, web, and mobile projects delivered for clients across industries." />
+        <meta name="keywords" content="portfolio, software projects, web apps, mobile apps, QuoreTex" />
+        <link rel="canonical" href="https://quore-tex.com/portfolio" />
+        {/* Open Graph */}
+        <meta property="og:title" content="Portfolio - QuoreTex Technologies" />
+        <meta property="og:description" content="Discover our portfolio of successful software, web, and mobile projects delivered for clients across industries." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://quore-tex.com/portfolio" />
+        <meta property="og:image" content="https://quore-tex.com/images/preview.png" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Portfolio - QuoreTex Technologies" />
+        <meta name="twitter:description" content="Discover our portfolio of successful software, web, and mobile projects delivered for clients across industries." />
+        <meta name="twitter:image" content="https://quore-tex.com/images/preview.png" />
+      </Helmet>
       <motion.section 
         initial="hidden"
         animate="show"

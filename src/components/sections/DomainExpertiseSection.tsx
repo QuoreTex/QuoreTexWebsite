@@ -27,7 +27,7 @@ const domains = [
 
 export default function DomainExpertiseSection() {
   return (
-    <section className="py-16 bg-background" id="domain-expertise">
+    <section className="py-16" style={{ backgroundColor: '#E6F6FF' }} id="domain-expertise">
       <div className="container mx-auto px-4">
         <motion.div
           variants={fadeIn("up")}
@@ -36,8 +36,11 @@ export default function DomainExpertiseSection() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold mb-4">Domain Expertise</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold mb-4">
+            <span style={{ color: '#1E3A8A' }}>Domain</span>{' '}
+            <span style={{ color: '#168AAD' }}>Expertise</span>
+          </h2>
+          <p className="max-w-2xl mx-auto text-lg bg-clip-text text-transparent bg-gradient-to-r from-[#168AAD] to-[#1E3A8A]">
             We bring extensive experience across various industries, delivering specialized solutions
             that drive innovation and growth.
           </p>
