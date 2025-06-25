@@ -52,7 +52,7 @@ const Header = () => {
                 <span className="text-[#168AAD]">Quore</span>
                 <span className="text-[#1E3A8A]">Tex</span>
               </span>
-              <span className="text-[13px] md:text-base font-medium tracking-wide mt-1" style={{ color: '#18AE61' }}>
+              <span className="text-[13px] md:text-base font-medium tracking-wide mt-1" style={{ color: '#1F2E6B' }}>
                 INNOVATE|CONNECT|SCALE
               </span>
             </span>

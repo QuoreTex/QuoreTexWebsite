@@ -32,7 +32,7 @@ const Footer = () => {
                   QuoreTex Technologies Pvt. Ltd.
                 </span>
               </div>
-              <div className="mt-2 text-[#18AE61] text-sm font-semibold tracking-wide uppercase">
+              <div className="mt-2 text-[#1F2E6B] text-sm font-semibold tracking-wide uppercase">
                 INNOVATE | CONNECT | SCALE
               </div>
             </div>
