@@ -52,10 +52,12 @@ const AboutSection = () => {
           ></motion.div>
           <motion.p 
             variants={fadeIn("up", 0.3)}
-            className="text-lg font-medium text-[#168AAD] mb-8 max-w-3xl mx-auto"
+            className="text-lg font-medium text-[#168AAD] mb-8 w-full max-w-none mx-auto text-justify"
           >
-            Founded in 2025, QuoreTex has quickly established itself as a leader in custom software development, 
-            delivering innovative solutions to businesses across diverse industries.
+           Founded in 2025, QuoreTex Technologies Pvt. Ltd. is a forward-thinking software development company committed to delivering cutting-edge digital solutions. At QuoreTex, we specialize in crafting custom software, web applications, mobile apps, and scalable cloud solutions that drive business growth and transformation.
+We believe in building not just software, but long-term value. Our agile development approach, robust quality assurance, and scalable architecture ensure that each product we deliver is reliable, secure, and future-ready. From ideation to deployment and post-launch support, QuoreTex remains involved at every step, delivering excellence with integrity.
+
+At the heart of QuoreTex is a team of creative engineers, UI/UX designers, strategists, and consultants who thrive on pushing boundaries and reimagining what’s possible with technology. Headquartered in India with a presence in the UK, we aim to bridge the global digital gap and empower businesses to innovate, connect, and scale.
           </motion.p>
         </motion.div>
 

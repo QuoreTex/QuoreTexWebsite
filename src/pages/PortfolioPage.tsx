@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
 import PortfolioSection from "@/components/sections/PortfolioSection";
-import CTASection from "@/components/sections/CTASection";
 import { fadeIn } from "@/lib/animations";
 import { Helmet } from "react-helmet";
 
 const PortfolioPage = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white min-h-screen" style={{ backgroundColor: '#fff' }}>
       <Helmet>
         <title>Portfolio - QuoreTex Technologies</title>
         <meta name="description" content="Discover our portfolio of successful software, web, and mobile projects delivered for clients across industries." />
@@ -28,7 +27,7 @@ const PortfolioPage = () => {
         initial="hidden"
         animate="show"
         variants={fadeIn("down")}
-        className="pt-32 pb-16 md:pt-40 md:pb-20"
+        className="pt-32 pb-16 md:pt-40 md:pb-20 bg-white"
       >
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto text-center">
@@ -46,19 +45,19 @@ const PortfolioPage = () => {
               }}
               className="flex justify-center mt-8 cursor-pointer group"
               onClick={() => {
-                const portfolio = document.getElementById('portfolio-list');
-                if (portfolio) {
-                  portfolio.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const contact = document.getElementById('contact');
+                if (contact) {
+                  contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
               }}
               tabIndex={0}
               role="button"
-              aria-label="Scroll to Portfolio List"
+              aria-label="Scroll to Contact Section"
               onKeyDown={e => {
                 if (e.key === 'Enter' || e.key === ' ') {
-                  const portfolio = document.getElementById('portfolio-list');
-                  if (portfolio) {
-                    portfolio.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  const contact = document.getElementById('contact');
+                  if (contact) {
+                    contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
                   }
                 }
               }}
@@ -89,9 +88,9 @@ const PortfolioPage = () => {
           </div>
         </div>
       </motion.section>
-
-      <PortfolioSection />
-      <CTASection />
+      <div className="bg-white">
+        <PortfolioSection />
+      </div>
     </div>
   );
 };

@@ -1,19 +1,33 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/lib/animations';
+import aiLogo from '../../../img/AI-removebg-preview.png';
+import awsLogo from '../../../img/aws-logo-removebg-preview.png';
+import javaLogo from '../../../img/JAVA-removebg-preview.png';
+import mlLogo from '../../../img/Machine-Learning-removebg-preview-removebg-preview.png';
+import pythonLogo from '../../../img/PYTHON-removebg-preview.png';
+import reactjsLogo from '../../../img/REACT_JS-removebg-preview.png';
+import reactNativeLogo from '../../../img/REACTNATIVE-removebg-preview.png';
+import springBootLogo from '../../../img/SPRINGBOOT-removebg-preview.png';
+import lowCodeLogo from '../../../img/logobg.png';
+import outsystemLogo from '../../../img/OUTSYSTEM-removebg-preview.png';
+import retoolLogo from '../../../img/RETOOL-removebg-preview.png';
+
+const logos = [
+  { src: aiLogo, alt: 'AI' },
+  { src: awsLogo, alt: 'AWS' },
+  { src: javaLogo, alt: 'Java' },
+  { src: mlLogo, alt: 'ML' },
+  { src: pythonLogo, alt: 'Python' },
+  { src: reactjsLogo, alt: 'React JS' },
+  { src: reactNativeLogo, alt: 'React Native' },
+  { src: springBootLogo, alt: 'Spring Boot' },
+  { src: lowCodeLogo, alt: 'Low-code' },
+  { src: outsystemLogo, alt: 'Outsystem' },
+  { src: retoolLogo, alt: 'Retool' },
+];
 
 const TechStackSection: React.FC = () => {
-  const technologies = [
-    { name: 'AI', color: 'from-purple-500 to-pink-500' },
-    { name: 'AWS', color: 'from-orange-500 to-yellow-500' },
-    { name: 'Java', color: 'from-red-500 to-orange-500' },
-    { name: 'ML', color: 'from-green-500 to-teal-500' },
-    { name: 'Python', color: 'from-blue-500 to-cyan-500' },
-    { name: 'React JS', color: 'from-cyan-500 to-blue-500' },
-    { name: 'React Native', color: 'from-indigo-500 to-purple-500' },
-    { name: 'Spring Boot', color: 'from-teal-500 to-green-500' },
-  ];
-
   return (
     <section id="tech-stack" className="py-20 bg-white relative overflow-hidden">
       {/* Background Effect */}
@@ -37,87 +51,33 @@ const TechStackSection: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {technologies.map((tech, index) => (
-            <motion.div
-              key={tech.name}
-              variants={fadeIn('up')}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              custom={index * 0.1}
-              whileHover={{ scale: 1.05, filter: 'brightness(1.1)' }}
-              className="group relative"
-            >
-              <div className={`
-                absolute -inset-0.5 rounded-xl bg-gradient-to-r ${tech.color} 
-                opacity-50 blur-sm group-hover:opacity-75 transition duration-500
-              `} />
-              <div className="
-                relative flex items-center justify-center h-32 rounded-lg
-                bg-white backdrop-blur-sm border border-slate-200
-                p-6 transition duration-300 group-hover:shadow-lg
-              ">
-                <h3 className={`
-                  text-xl font-bold bg-gradient-to-r ${tech.color}
-                  bg-clip-text text-transparent group-hover:scale-110
-                  transition duration-300
-                `}>
-                  {tech.name}
-                </h3>
-              </div>
-            </motion.div>
-          ))}
+        {/* Logo Marquee Section */}
+        <div className="w-full overflow-hidden py-4" style={{ backgroundColor: '#E6F6FF' }}>
+          <div
+            className="flex gap-10 whitespace-nowrap items-center animate-scroll"
+            style={{ animation: 'scroll 30s linear infinite' }}
+          >
+            {[...logos, ...logos].map((logo, index) => (
+              <img
+                key={index}
+                src={logo.src}
+                alt={logo.alt}
+                className="h-auto max-h-20 object-contain"
+                style={{ maxWidth: 120 }}
+              />
+            ))}
+          </div>
         </div>
 
-        {/* Low-code Platforms Section */}
-        <motion.div
-          variants={fadeIn('up')}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="text-center mt-20 mb-8"
-        >
-          <h3 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-blue-600">
-            Low-code Platforms
-          </h3>
-          <p className="text-slate-600 max-w-xl mx-auto text-md mb-8">
-            Accelerate development with powerful low-code tools
-          </p>
-        </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          {[
-            { name: 'Low-code', color: 'from-green-400 to-blue-400' },
-            { name: 'Outsystem', color: 'from-pink-500 to-yellow-500' },
-            { name: 'Retool', color: 'from-blue-500 to-indigo-500' },
-          ].map((tech, index) => (
-            <motion.div
-              key={tech.name}
-              variants={fadeIn('up')}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              custom={index * 0.1}
-              whileHover={{ scale: 1.05, filter: 'brightness(1.1)' }}
-              className="group relative"
-            >
-              <div className={
-                `absolute -inset-0.5 rounded-xl bg-gradient-to-r ${tech.color} opacity-50 blur-sm group-hover:opacity-75 transition duration-500`
-              } />
-              <div className="
-                relative flex items-center justify-center h-32 rounded-lg
-                bg-white backdrop-blur-sm border border-slate-200
-                p-6 transition duration-300 group-hover:shadow-lg
-              ">
-                <h3 className={
-                  `text-xl font-bold bg-gradient-to-r ${tech.color} bg-clip-text text-transparent group-hover:scale-110 transition duration-300`
-                }>
-                  {tech.name}
-                </h3>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        <style>{`
+          @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .animate-scroll {
+            will-change: transform;
+          }
+        `}</style>
 
         {/* Decorative Elements */}
         <div className="absolute top-20 -left-20 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl" />

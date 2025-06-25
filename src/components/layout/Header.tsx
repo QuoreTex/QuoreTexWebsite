@@ -47,12 +47,15 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
             <img src={image} className="h-16 w-16 text-primary"/>
-            <span className="font-bold text-xl md:text-2xl">
-  <span className="text-[#168AAD]">Quore</span>
-  <span className="text-[#1E3A8A]">Tex</span>
-</span>
-
-
+            <span className="flex flex-col items-start">
+              <span className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-0 text-blue-900 drop-shadow-lg">
+                <span className="text-[#168AAD]">Quore</span>
+                <span className="text-[#1E3A8A]">Tex</span>
+              </span>
+              <span className="text-[13px] md:text-base font-medium tracking-wide mt-1" style={{ color: '#18AE61' }}>
+                INNOVATE|CONNECT|SCALE
+              </span>
+            </span>
           </Link>
 
           {/* Desktop Nav */}

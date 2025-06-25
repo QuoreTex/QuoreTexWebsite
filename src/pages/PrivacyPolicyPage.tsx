@@ -22,9 +22,10 @@ const PrivacyPolicyPage = () => {
 
           <div className="space-y-8">
             <section>
-              <h2 className="text-xl font-semibold text-gray-900 mb-4">
+              <h1 className="text-xl font-semibold text-gray-900 mb-4">
                 👋 Introduction
-              </h2>
+                
+              </h1>
               <div className="text-gray-700 space-y-4">
                 <p>
                   Hey there! We're QuoreTex Technologies, and we want to be super

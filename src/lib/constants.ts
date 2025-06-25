@@ -168,11 +168,11 @@ export const COMPANY_INFO = {
   name: "QuoreTex Technologies Pvt. Ltd.",
   addresses: {
     india: {
-      label: "Headquarters – India 🇮🇳",
-      address: "Flat No. 201, Tulasi Pearl,\nNear Navnath Mandir, VMV Road,\nAmravati, Maharashtra – 444604"
+      label: "Headquarters – India ",
+      address: "Tulasi Pearl,\nNear Navnath Mandir, VMV Road,\nAmravati, Maharashtra – 444604"
     },
     uk: {
-      label: "Branch Office – United Kingdom 🇬🇧",
+      label: "Office – United Kingdom ",
       address: "92 Meadowbank Gardens,\nHounslow, London,\nEngland – TW5 9TU"
     }
   },

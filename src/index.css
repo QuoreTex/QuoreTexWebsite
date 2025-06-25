@@ -18,7 +18,10 @@
 }
 
 /* Base styles */
-body {
+html, body {
+
+overflow-x: hidden;
+
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
@@ -148,4 +151,24 @@ button:hover {
 /* Dark blue text utility class */
 .text-blue-dark {
   color: #184E77 !important;
+}
+
+.with-header-offset {
+  padding-top: 6rem; /* Adjust based on actual header height */
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
