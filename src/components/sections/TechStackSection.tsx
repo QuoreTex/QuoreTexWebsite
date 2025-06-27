@@ -7,24 +7,32 @@ import javaLogo from '../../../img/JAVA-removebg-preview.png';
 import mlLogo from '../../../img/Machine-Learning-removebg-preview-removebg-preview.png';
 import pythonLogo from '../../../img/PYTHON-removebg-preview.png';
 import reactjsLogo from '../../../img/REACT_JS-removebg-preview.png';
-import reactNativeLogo from '../../../img/REACTNATIVE-removebg-preview.png';
 import springBootLogo from '../../../img/SPRINGBOOT-removebg-preview.png';
-import lowCodeLogo from '../../../img/logobg.png';
+import powerAppsLogo from '../../../img/POWER_APPS.png';
+import powerAutomationLogo from '../../../img/POWER_AUTOMATE.png';
+import powerBiLogo from '../../../img/POWER_BI.png';
+import powerVaLogo from '../../../img/POWER_VA.png';
 import outsystemLogo from '../../../img/OUTSYSTEM-removebg-preview.png';
 import retoolLogo from '../../../img/RETOOL-removebg-preview.png';
+import reactNativeLogo from '../../../img/REACTNATIVE-removebg-preview.png';
 
 const logos = [
+   { src: pythonLogo, alt: 'Python' },
   { src: aiLogo, alt: 'AI' },
   { src: awsLogo, alt: 'AWS' },
   { src: javaLogo, alt: 'Java' },
   { src: mlLogo, alt: 'ML' },
-  { src: pythonLogo, alt: 'Python' },
   { src: reactjsLogo, alt: 'React JS' },
-  { src: reactNativeLogo, alt: 'React Native' },
   { src: springBootLogo, alt: 'Spring Boot' },
-  { src: lowCodeLogo, alt: 'Low-code' },
+  { src: powerAppsLogo, alt: 'Power Apps' },
+  { src: powerAutomationLogo, alt: 'Power Automation' },
+  { src: powerBiLogo, alt: 'Power BI' },
+  { src: powerVaLogo, alt: 'Power VA' },
   { src: outsystemLogo, alt: 'Outsystem' },
   { src: retoolLogo, alt: 'Retool' },
+  { src: outsystemLogo, alt: 'Outsystem' },
+  { src: retoolLogo, alt: 'Retool' },
+   { src: reactNativeLogo, alt: 'React Native' },
 ];
 
 const TechStackSection: React.FC = () => {

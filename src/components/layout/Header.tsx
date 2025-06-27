@@ -46,14 +46,14 @@ const Header = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
-            <img src={image} className="h-16 w-16 text-primary"/>
+            <img src={image} className="h-20 w-18 text-primary"/>
             <span className="flex flex-col items-start">
-              <span className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-0 text-blue-900 drop-shadow-lg">
+              <span className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-0 text-blue-900 drop-shadow-lg min-w-[200px] md:min-w-[250px] max-w-[300px] md:max-w-[350px]" style={{display: 'inline-block'}}>
                 <span className="text-[#168AAD]">Quore</span>
                 <span className="text-[#1E3A8A]">Tex</span>
               </span>
-              <span className="text-[13px] md:text-base font-medium tracking-wide mt-1" style={{ color: '#1F2E6B' }}>
-                INNOVATE|CONNECT|SCALE
+              <span className="text-[10px] md:text-xs font-semibold tracking-wide mt-1 min-w-[120px] md:min-w-[150px] max-w-none md:max-w-none whitespace-nowrap ml-4" style={{ color: '#1F2E6B', display: 'inline-block' }}>
+              Innovate. Connect. Scale.
               </span>
             </span>
           </Link>
