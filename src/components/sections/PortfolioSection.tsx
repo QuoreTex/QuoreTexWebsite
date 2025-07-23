@@ -26,7 +26,7 @@ const PortfolioSection = () => {
   const showProjects = false;
 
   return (
-    <section ref={ref} id="portfolio-list" className="py-20 style={{ backgroundColor: '#E6F6FF' }}">
+    <section ref={ref} id="portfolio-list" className="py-20 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           variants={staggerContainer}

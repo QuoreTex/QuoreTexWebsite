@@ -5,8 +5,7 @@ import {
   Cloud,
   Wrench,
   Brain,
-  Zap,
-  ArrowRight
+  Zap
 } from "lucide-react";
 
 // Mock data for services
@@ -149,13 +148,8 @@ const ServicesSection = () => {
                     {service.description}
                   </p>
 
-                  {/* Learn More Button */}
-                  <div className="flex items-center justify-between">
-                    <button className="inline-flex items-center px-6 py-3 bg-white/20 hover:bg-white hover:text-[#1A759F] text-white font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 group-hover:shadow-lg border border-white/30 hover:border-white">
-                      <span>Learn More</span>
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                    </button>
-                    
+                  {/* Removed Learn More Button, keep the dot for design consistency */}
+                  <div className="flex items-center justify-end">
                     <div className="w-2 h-2 bg-white/50 rounded-full group-hover:bg-white transition-colors duration-300"></div>
                   </div>
                 </div>
@@ -169,13 +163,7 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center">
-          <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#1E3A8A] to-[#168AAD] text-white font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
-            <span>Explore All Services</span>
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </div>
-        </div>
+        {/* Bottom CTA removed as requested */}
       </div>
 
       <style>{`

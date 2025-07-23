@@ -19,10 +19,10 @@ const CTASection = () => {
           animate={inView ? "show" : "hidden"}
           className="max-w-4xl mx-auto text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white drop-shadow-lg">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1E3A8A' }}>
             Ready to Transform Your Business?
           </h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto text-white/90 drop-shadow">
+          <p className="text-lg mb-8 max-w-2xl mx-auto drop-shadow" style={{ color: '#1E3A8A' }}>
             Let's work together to create innovative software solutions that drive
             growth and success.
           </p>
@@ -38,7 +38,7 @@ const CTASection = () => {
             <Button
               size="lg"
               variant="outline"
-              className="rounded-full px-8 border-white text-white hover:bg-white/20"
+              className="rounded-full px-8 border-white text-white hover:bg-[#1E3A8A] hover:text-white focus:bg-[#1E3A8A] focus:text-white"
               asChild
             >
               <Link to="/services">Learn More</Link>

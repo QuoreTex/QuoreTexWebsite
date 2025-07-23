@@ -15,15 +15,17 @@ import powerVaLogo from '../../../img/POWER_VA.png';
 import outsystemLogo from '../../../img/OUTSYSTEM-removebg-preview.png';
 import retoolLogo from '../../../img/RETOOL-removebg-preview.png';
 import reactNativeLogo from '../../../img/REACTNATIVE-removebg-preview.png';
+import serviceNowLogo from '../../../img/servicenowlogo.png';
 
 const logos = [
-   { src: pythonLogo, alt: 'Python' },
+  { src: pythonLogo, alt: 'Python' },
   { src: aiLogo, alt: 'AI' },
   { src: awsLogo, alt: 'AWS' },
   { src: javaLogo, alt: 'Java' },
   { src: mlLogo, alt: 'ML' },
   { src: reactjsLogo, alt: 'React JS' },
   { src: springBootLogo, alt: 'Spring Boot' },
+  { src: serviceNowLogo, alt: 'ServiceNow'},
   { src: powerAppsLogo, alt: 'Power Apps' },
   { src: powerAutomationLogo, alt: 'Power Automation' },
   { src: powerBiLogo, alt: 'Power BI' },
@@ -32,9 +34,9 @@ const logos = [
   { src: retoolLogo, alt: 'Retool' },
   { src: outsystemLogo, alt: 'Outsystem' },
   { src: retoolLogo, alt: 'Retool' },
-   { src: reactNativeLogo, alt: 'React Native' },
+  { src: reactNativeLogo, alt: 'React Native' },
+  
 ];
-
 const TechStackSection: React.FC = () => {
   return (
     <section id="tech-stack" className="py-20 bg-white relative overflow-hidden">
@@ -62,8 +64,8 @@ const TechStackSection: React.FC = () => {
         {/* Logo Marquee Section */}
         <div className="w-full overflow-hidden py-4" style={{ backgroundColor: '#E6F6FF' }}>
           <div
-            className="flex gap-10 whitespace-nowrap items-center animate-scroll"
-            style={{ animation: 'scroll 30s linear infinite' }}
+            className="flex gap-10 whitespace-nowrap items-center animate-smooth-scroll"
+            style={{ display: 'inline-flex', willChange: 'transform' }}
           >
             {[...logos, ...logos].map((logo, index) => (
               <img
@@ -78,12 +80,16 @@ const TechStackSection: React.FC = () => {
         </div>
 
         <style>{`
-          @keyframes scroll {
+          @keyframes smooth-scroll {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
           }
-          .animate-scroll {
-            will-change: transform;
+          .animate-smooth-scroll {
+            animation: smooth-scroll 20s linear infinite;
+            animation-timing-function: linear;
+          }
+          .animate-smooth-scroll:hover {
+            animation-play-state: paused;
           }
         `}</style>
 
