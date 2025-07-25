@@ -53,4 +53,8 @@
   <url>
     <loc>https://quore-tex.com/terms</loc>
     <lastmod>2025-07-01</lastmod>
-    <changef
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
