@@ -8,6 +8,7 @@ import ContactSection from "@/components/sections/ContactSection";
 import TechStackSection from "@/components/sections/TechStackSection";
 import DomainExpertiseSection from "@/components/sections/DomainExpertiseSection";
 import { Helmet } from "react-helmet"; // You can switch to "react-helmet-async" if needed
+import PortfolioSection from "@/components/sections/PortfolioSection";
 
 const HomePage = () => {
   return (
@@ -57,6 +58,7 @@ const HomePage = () => {
       </section>
       <DomainExpertiseSection />
       <FeaturesSection />
+      <PortfolioSection/>
       <TechStackSection />
       <ContactSection />
     </div>

@@ -23,7 +23,7 @@ const PortfolioSection = () => {
 
   const filteredProjects = PORTFOLIO_ITEMS;
   // Projects are now visible
-  const showProjects = false;
+  const showProjects = true;
 
   return (
     <section ref={ref} id="portfolio-list" className="py-20 bg-white">
@@ -50,7 +50,7 @@ const PortfolioSection = () => {
 
         {/* Conditionally render the projects grid */}
         {showProjects && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-center mx-auto">
             {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.id}
@@ -63,7 +63,7 @@ const PortfolioSection = () => {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="object-cover w-full h-full"
+                      className="object-contain w-full h-full"
                     />
                   </AspectRatio>
                   <CardContent className="p-6">
@@ -96,6 +96,10 @@ const PortfolioSection = () => {
                 </Card>
               </motion.div>
             ))}
+            {/* Add a placeholder to center the last card if odd number of items */}
+            {filteredProjects.length % 2 === 1 && (
+              <div className="hidden md:block lg:block" />
+            )}
           </div>
         )}
       </div>

@@ -77,36 +77,38 @@ export const COMPANY_VALUES = [
 
 export const PORTFOLIO_ITEMS = [
   {
-    id: 1,
-    title: "FinTech Payment Platform",
-    description: "A secure, scalable payment processing system for a leading financial services provider.",
-    image: "https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    techStack: ["React", "Node.js", "PostgreSQL", "AWS"],
-    category: "Web Application",
-  },
-  {
-    id: 2,
-    title: "Healthcare Management System",
-    description: "Comprehensive patient management solution for a network of hospitals and clinics.",
-    image: "https://images.pexels.com/photos/7659564/pexels-photo-7659564.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    techStack: ["Angular", "Python", "MongoDB", "Docker"],
-    category: "Custom Software",
-  },
-  {
-    id: 3,
-    title: "E-commerce Mobile App",
-    description: "Feature-rich shopping application with personalized recommendations and secure checkout.",
-    image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    techStack: ["React Native", "GraphQL", "Firebase", "Stripe"],
-    category: "Mobile App",
-  },
+  id: 1,
+  title: "Mr.Kaamwala",
+  description: "A low-code appointment booking and management system built using OutSystems, designed for service-based businesses to handle bookings, invoices, and customer data from a centralized dashboard.",
+  image:"/img/mrkamwala.jpg",
+  techStack: ["OutSystems", "OutSystems Service Studio", "Integrated Database", "Responsive Web UI"],
+  category: "Web Application"
+},
+ {
+  id: 2,
+  title: "MedZyHQ – Guiding Doctors to the UK",
+  description: "MedZyHQ guides international doctors through every challenge—from interview preparation to relocation—ensuring a smooth transition and success in the UK healthcare system.",
+  image: "https://images.pexels.com/photos/8376192/pexels-photo-8376192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", // Replace with actual screenshot if available
+  techStack: ["React", "Tailwind CSS", "JavaScript", "Vite", "Responsive Design"],
+  category: "Healthcare Consulting Website"
+}
+,
+ {
+  id: 3,
+  title: "Payvaat – Trekking & Tourism Management App",
+  description: "A low-code application built using OutSystems to streamline trekking and tourism operations, including trip scheduling, participant tracking, and guide coordination for tourism companies.",
+  image: "https://images.pexels.com/photos/672358/pexels-photo-672358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", // Replace with actual app screenshot if available
+  techStack: ["OutSystems", "OutSystems Service Studio", "Integrated Database", "Responsive Web UI"],
+  category: "Tourism Management Application"
+},
+
   {
     id: 4,
-    title: "Supply Chain Management Platform",
-    description: "End-to-end logistics and inventory management system for global manufacturing company.",
-    image: "https://images.pexels.com/photos/8145339/pexels-photo-8145339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    techStack: ["Vue.js", ".NET Core", "SQL Server", "Azure"],
-    category: "Cloud Solution",
+    title: "Odd-Job",
+    description: "A user-friendly platform connecting blue-collar workers with short-term, daily wage, and odd job opportunities nearby,Also An easy-to-use job marketplace for blue-collar workers to find and manage short-term and daily wage jobs efficiently.",
+    image: "/img/Bluecollar.jpeg",
+    techStack: ["Java(SpringBoot)", "SQL Server", "React Native"],
+    category: "Blue-Collar Job Platform",
   },
 ];
 

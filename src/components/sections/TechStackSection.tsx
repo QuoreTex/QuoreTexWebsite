@@ -32,8 +32,6 @@ const logos = [
   { src: powerVaLogo, alt: 'Power VA' },
   { src: outsystemLogo, alt: 'Outsystem' },
   { src: retoolLogo, alt: 'Retool' },
-  { src: outsystemLogo, alt: 'Outsystem' },
-  { src: retoolLogo, alt: 'Retool' },
   { src: reactNativeLogo, alt: 'React Native' },
   
 ];
