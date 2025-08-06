@@ -28,7 +28,7 @@ const ServicesPage = () => {
       <motion.section 
         initial="hidden"
         animate="show"
-        variants={fadeIn("down")}
+        variants={fadeIn("up")}
         className="pt-32 pb-16 md:pt-40 md:pb-20"
       >
         <div className="container mx-auto px-4 md:px-6">
@@ -47,10 +47,7 @@ const ServicesPage = () => {
               }}
               className="flex justify-center mt-8 cursor-pointer group"
               onClick={() => {
-                const services = document.getElementById('services-list');
-                if (services) {
-                  services.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                 window.scrollBy({ top: window.innerHeight * 0.6, behavior: "smooth" });
               }}
               tabIndex={0}
               role="button"

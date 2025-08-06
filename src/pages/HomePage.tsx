@@ -1,14 +1,14 @@
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 import ServicesSection from "@/components/sections/ServicesSection";
-// import PortfolioSection from "@/components/sections/PortfolioSection";
+import PortfolioSection from "@/components/sections/PortfolioSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
 // import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import TechStackSection from "@/components/sections/TechStackSection";
 import DomainExpertiseSection from "@/components/sections/DomainExpertiseSection";
 import { Helmet } from "react-helmet"; // You can switch to "react-helmet-async" if needed
-import PortfolioSection from "@/components/sections/PortfolioSection";
+
 
 const HomePage = () => {
   return (
@@ -45,20 +45,16 @@ const HomePage = () => {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
-      <section id="portfolio" className="py-20 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#1E3A8A]">Our Portfolio</h2>
-            <p className="text-xl text-[#168AAD]">
-              Explore our past projects and discover how we've helped businesses achieve their goals.
-            </p>
-            {/* ...existing code... */}
-          </div>
-        </div>
-      </section>
+      <PortfolioSection />
+      
+
+
+
+
+
+      
       <DomainExpertiseSection />
       <FeaturesSection />
-      <PortfolioSection/>
       <TechStackSection />
       <ContactSection />
     </div>

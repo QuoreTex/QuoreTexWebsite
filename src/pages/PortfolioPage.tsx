@@ -26,7 +26,7 @@ const PortfolioPage = () => {
       <motion.section 
         initial="hidden"
         animate="show"
-        variants={fadeIn("down")}
+        variants={fadeIn("up")}
         className="pt-32 pb-16 md:pt-40 md:pb-20 bg-white"
       >
         <div className="container mx-auto px-4 md:px-6">
@@ -45,20 +45,14 @@ const PortfolioPage = () => {
               }}
               className="flex justify-center mt-8 cursor-pointer group"
               onClick={() => {
-                const contact = document.getElementById('contact');
-                if (contact) {
-                  contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                window.scrollBy({ top: window.innerHeight * 0.6, behavior: "smooth" });
               }}
               tabIndex={0}
               role="button"
-              aria-label="Scroll to Contact Section"
+              aria-label="Scroll down"
               onKeyDown={e => {
                 if (e.key === 'Enter' || e.key === ' ') {
-                  const contact = document.getElementById('contact');
-                  if (contact) {
-                    contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
+                  window.scrollBy({ top: window.innerHeight * 0.3, behavior: "smooth" });
                 }
               }}
             >

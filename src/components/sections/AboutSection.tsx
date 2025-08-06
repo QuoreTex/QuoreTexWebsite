@@ -114,8 +114,13 @@ Our team of engineers, designers, and consultants are passionate about transform
             animate={inView ? "show" : "hidden"}
             className="text-2xl md:text-3xl font-bold text-center mb-12"
           >
-            <span className="text-[#1E3A8A]">Our</span>{" "}
-            <span className="text-[#168AAD]">Core Values</span>
+            <h2 className="text-5xl font-bold mb-6">
+            <span style={{ color: '#1E3A8A' }}>Our </span>{' '}
+            <span style={{ color: '#168AAD' }}>Core Values</span>
+          </h2>
+          {/* <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+           At QuoreTex, our core values Quality, Integrity, Sustainability, and Customer Centricity guide every decision we make, ensuring innovative, ethical, and client focused solutions that drive lasting impact
+          </p> */}
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
