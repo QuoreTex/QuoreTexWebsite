@@ -72,7 +72,7 @@ const Footer = () => {
                 />
                 <div className="flex flex-col items-start">
                   <span className="font-bold text-lg md:text-xl lg:text-2xl text-foreground whitespace-nowrap">
-                    <span className="text-[#168AAD]">QuoreTex</span><span className="text-[#1E3A8A]">Technologies Pvt. Ltd.</span> 
+                    <span className="text-[#168AAD]">QuoreTex</span><span className="text-[#1E3A8A]"> Technologies Pvt. Ltd.</span> 
                   </span>
                   <span className="text-[9px] md:text-xs font-semibold tracking-wide mt-1 min-w-[100px] md:min-w-[150px] max-w-none whitespace-nowrap" style={{ color: '#1F2E6B', display: 'inline-block' }}>
                   Innovate. Connect. Scale.
