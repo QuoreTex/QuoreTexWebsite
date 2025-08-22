@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import Header from "./Header";
 import Footer from "./Footer";
+import FloatingChatWidget from "../sections/chatbotsection";
 
 interface LayoutProps {
   children: ReactNode;
@@ -22,6 +23,8 @@ const Layout = ({ children, hideFooter }: LayoutProps) => {
         {children}
       </motion.main>
       {!hideFooter && <Footer />}
+      {/* Global floating chat widget */}
+      <FloatingChatWidget />
     </div>
   );
 };
