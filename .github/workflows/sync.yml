@@ -1,3 +1,4 @@
-- run: echo "Token length: ${#TOKEN}"
+- name: Debug secret length
+  run: echo "Token length: ${#TOKEN}"
   env:
     TOKEN: ${{ secrets.DEPLOY_REPO_TOKEN }}
