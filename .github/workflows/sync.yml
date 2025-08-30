@@ -1,4 +1,24 @@
-- name: Debug secret length
-  env:
-    TOKEN: ${{ secrets.DEPLOY_REPO_TOKEN }}
-  run: echo "Token length: ${#TOKEN}"
+name: Mirror to Hosting Repo
+
+on:
+  push:
+    branches:
+      - main   # change if your default branch is different
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main repo
+        uses: actions/checkout@v3
+
+      - name: Mirror push to hosting repo
+        env:
+          TOKEN: ${{ secrets.DEPLOY_REPO_TOKEN }}
+        run: |
+          git config --global user.name "QuoreTex Auto Deploy"
+          git config --global user.email "deploy@quoretex.com"
+
+          git remote add hosting https://x-access-token:${TOKEN}@github.com/QuoreTex/QuoreTexWebsite.git
+          git push --force hosting main:main
