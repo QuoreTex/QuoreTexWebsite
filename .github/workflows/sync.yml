@@ -1,0 +1,22 @@
+name: Mirror to Hosting Repo
+
+on:
+  push:
+    branches:
+      - main   # adjust if default branch is different
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main repo
+        uses: actions/checkout@v3
+
+      - name: Push to hosting repo
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git remote add hosting https://x-access-token:${{ secrets.DEPLOY_REPO_TOKEN }}@github.com/QuoreTex/QuoreTexWebsite.git
+          git push --force hosting main:main
