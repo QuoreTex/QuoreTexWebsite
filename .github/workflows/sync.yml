@@ -3,15 +3,17 @@ name: Mirror to Hosting Repo
 on:
   push:
     branches:
-      - main   # change if your default branch is different
+      - main
 
 jobs:
   sync:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout main repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch full history for complete mirror
+          token: ${{ secrets.DEPLOY_REPO_TOKEN }}
 
       - name: Mirror push to hosting repo
         env:
@@ -19,6 +21,5 @@ jobs:
         run: |
           git config --global user.name "QuoreTex Auto Deploy"
           git config --global user.email "deploy@quoretex.com"
-
           git remote add hosting https://x-access-token:${TOKEN}@github.com/QuoreTex/QuoreTexWebsite.git
           git push --force hosting main:main
