@@ -115,32 +115,32 @@ export const PORTFOLIO_ITEMS = [
 export const TESTIMONIALS = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    position: "CTO, HealthCare Plus",
+    name: "Mr. Sarthak",
+    position: "Director, Mr. Kamwala",
     content: "QuoreTex delivered a solution that transformed our patient management processes. Their team's technical expertise and commitment to understanding our unique needs resulted in a system that exceeded our expectations.",
     image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     id: 2,
-    name: "Mark Williams",
-    position: "CEO, TechInnovate",
+    name: "Mr. Gaurav V.",
+    position: "Founder, Vaidya Tiles",
     content: "Working with QuoreTex has been a game-changer for our business. Their agile approach and attention to detail helped us launch our platform ahead of schedule and under budget.",
     image: "https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     id: 3,
-    name: "Jennifer Lee",
-    position: "Product Director, E-Shop Global",
+    name: "Dr. Ashish",
+    position: "Director, MedzyHQ",
     content: "The mobile app developed by QuoreTex has significantly increased our customer engagement and sales. Their ongoing support and proactive approach to maintenance have been invaluable.",
     image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
-  {
-    id: 4,
-    name: "David Chen",
-    position: "Operations Manager, LogiTrack",
-    content: "QuoreTex's cloud solution has revolutionized our supply chain operations. The system's reliability and scalability have supported our rapid growth without any performance issues.",
-    image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
+  // {
+  //   id: 4,
+  //   name: "David Chen",
+  //   position: "Operations Manager, LogiTrack",
+  //   content: "QuoreTex's cloud solution has revolutionized our supply chain operations. The system's reliability and scalability have supported our rapid growth without any performance issues.",
+  //   image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  // },
 ];
 
 export const COMPANY_FEATURES = [
