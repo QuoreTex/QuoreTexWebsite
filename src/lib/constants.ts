@@ -86,11 +86,11 @@ export const PORTFOLIO_ITEMS = [
 },
  {
   id: 2,
-  title: "MedZyHQ – Guiding Doctors to the UK",
+  title: "MedZyHQ: Healthcare Career Support",
   description: "MedZyHQ guides international doctors through every challenge—from interview preparation to relocation—ensuring a smooth transition and success in the UK healthcare system.",
   image: "https://images.pexels.com/photos/8376192/pexels-photo-8376192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", // Replace with actual screenshot if available
   techStack: ["React", "Tailwind CSS", "JavaScript", "Vite", "Responsive Design"],
-  category: "Healthcare Consulting Website"
+  category: "Healthcare"
 }
 ,
  {
@@ -98,17 +98,17 @@ export const PORTFOLIO_ITEMS = [
   title: "Payvaat – Trekking & Tourism Management App",
   description: "A low-code application built using OutSystems to streamline trekking and tourism operations, including trip scheduling, participant tracking, and guide coordination for tourism companies.",
   image: "https://images.pexels.com/photos/672358/pexels-photo-672358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", // Replace with actual app screenshot if available
-  techStack: ["OutSystems", "OutSystems Service Studio", "Integrated Database", "Responsive Web UI"],
-  category: "Tourism Management Application"
+  techStack: ["OutSystems", "Integrated Database", "Responsive Web UI"],
+  category: "Tourism Management"
 },
 
   {
     id: 4,
-    title: "Odd-Job",
+    title: "Odd-Jobs",
     description: "A user-friendly platform connecting blue-collar workers with short-term, daily wage, and odd job opportunities nearby,Also An easy-to-use job marketplace for blue-collar workers to find and manage short-term and daily wage jobs efficiently.",
-    image: "/img/Bluecollar.jpeg",
+  image: "/img/Bluecollar.jpeg",
     techStack: ["Java(SpringBoot)", "SQL Server", "React Native"],
-    category: "Blue-Collar Job Platform",
+    category: "Job Platform",
   },
 ];
 
