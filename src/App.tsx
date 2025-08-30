@@ -13,6 +13,7 @@ import NotFoundPage from "@/pages/NotFoundPage";
 import PrivacyPolicyPage from "@/pages/PrivacyPolicyPage";
 import TermsOfServicePage from "@/pages/TermsOfServicePage";
 import TechInfoPage from "@/pages/TechInfoPage";
+import VoicesOfTrust from "@/pages/Voices of Trust";
 
 import { HelmetProvider } from "react-helmet-async";
 
@@ -30,6 +31,7 @@ function App() {
             <Route path="/tech-stack" element={<TechStackPage />} />
             <Route path="/tech/:techName" element={<TechInfoPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/voices-of-trust" element={<VoicesOfTrust />} />
             <Route path="/privacy" element={<PrivacyPolicyPage />} />
             <Route path="/terms" element={<TermsOfServicePage />} />
             <Route path="*" element={<NotFoundPage />} />

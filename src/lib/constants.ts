@@ -4,6 +4,7 @@ export const NAV_LINKS = [
   { name: "Services", path: "/services" },
   { name: "Portfolio", path: "/portfolio" },
   { name: "Tech Stack", path: "/tech-stack" },
+  { name: "Voices of Trust", path: "/voices-of-trust" },
   { name: "Contact", path: "/contact" },
 ];
 
