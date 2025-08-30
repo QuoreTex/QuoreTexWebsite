@@ -32,7 +32,7 @@ const VoicesOfTrust = () => {
         <meta name="twitter:description" content="Explore our cutting-edge technology stack including AI, AWS, Java, Python, React, and more. We leverage the latest technologies to build innovative solutions." />
         <meta name="twitter:image" content="https://quore-tex.com/images/preview.png" />
       </Helmet>
-      
+
       <div className="pt-20">
         <TestimonialsSection />
       </div>
