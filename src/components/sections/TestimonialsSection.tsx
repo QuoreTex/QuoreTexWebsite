@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { TESTIMONIALS } from "@/lib/constants";
@@ -55,8 +55,7 @@ const TestimonialsSection = () => {
           ></motion.div>
           <motion.p 
             variants={fadeIn("up", 0.3)}
-            className="text-lg text-muted-foreground"
-          >
+            className="text-lg text-muted-foreground" >
             Don't just take our word for it. Hear what our clients have to say about working with QuoreTex.
           </motion.p>
         </motion.div>
@@ -93,7 +92,7 @@ const TestimonialsSection = () => {
                     </blockquote>
                     <div className="flex items-center">
                       <Avatar className="h-12 w-12 mr-4 border-2 border-primary">
-                        <AvatarImage src={testimonial.image} alt={testimonial.name} />
+                        {/* <AvatarImage src={testimonial.image} alt={testimonial.name} /> */}
                         <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                       </Avatar>
                       <div>
