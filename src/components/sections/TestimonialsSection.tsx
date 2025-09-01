@@ -47,7 +47,7 @@ const TestimonialsSection = () => {
             variants={textVariant}
             className="text-3xl md:text-4xl font-bold mb-4 text-accent-dark"
           >
-            Client <span className="text-primary">Testimonials</span>
+            Voice Of <span className="text-primary">Trust</span>
           </motion.h2>
           <motion.div 
             variants={fadeIn("up", 0.2)}
