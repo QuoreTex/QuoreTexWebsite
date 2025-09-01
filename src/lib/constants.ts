@@ -118,22 +118,22 @@ export const TESTIMONIALS = [
     id: 1,
     name: "Mr. Sarthak",
     position: "Director, Mr. Kamwala",
-    content: "QuoreTex delivered a solution that transformed our patient management processes. Their team's technical expertise and commitment to understanding our unique needs resulted in a system that exceeded our expectations.",
-    image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    content: "QuoreTex delivered a solution that transformed our patient management processes. Their expertise and commitment helped us save staff time and streamline workflows, resulting in a system that exceeded our expectations."
+     // image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     id: 2,
     name: "Mr. Gaurav V.",
     position: "Founder, Vaidya Tiles",
-    content: "Working with QuoreTex has been a game-changer for our business. Their agile approach and attention to detail helped us launch our platform ahead of schedule and under budget.",
-    image: "https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    content: "QuoreTex transformed the way we handle our invoices with a smart and reliable management system. Their team understood our challenges, delivered on time, and built a solution that is simple, efficient, and aligned with our business needs. We value their professionalism and commitment, and we see QuoreTex as a long-term partner in our digital growth."
+    // image: "https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     id: 3,
     name: "Dr. Ashish",
     position: "Director, MedzyHQ",
-    content: "The mobile app developed by QuoreTex has significantly increased our customer engagement and sales. Their ongoing support and proactive approach to maintenance have been invaluable.",
-    image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    content:  "QuoreTex delivered exactly what we envisioned for MedzyHQ — a clean, reliable, and user-friendly platform. Their expertise and timely execution made the entire process seamless."
+     // image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   // {
   //   id: 4,
